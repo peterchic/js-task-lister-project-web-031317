@@ -8,20 +8,20 @@
   <script src="js/lib/jquery-2.1.1.min.js"></script>
   <script src="js/models/list.js"></script>
   <script src="js/models/task.js"></script>
-  <script src="js/controllers/lists.controller.js"></script>
-  <script src="js/controllers/tasks.controller.js"></script>
+  <!-- <script src="js/controllers/lists.controller.js"></script>
+  <script src="js/controllers/tasks.controller.js"></script> -->
   <script src="js/app.js"></script>
 </head>
 <body>
   <div id="wrapper">
     <h1>my task list</h1>
 
-    <form id="add_list" action="#" methos="post">
+    <form id="add_list" action="#" method="post">
       <label for="list_title">Add a new list:</label>
       <input type="text" id="list_title" name="list_title" placeholder="title">
-      <input type="submit" value="(+) add">
+      <input type="submit" value="Create List">
     </form><!-- #add_list -->
-    
+
     <form id="add_task" action="#" method="post">
       <label for="select_list">Select List:</label>
       <select id="select_list" name="select_list"></select>
@@ -29,11 +29,18 @@
       <input type="text" id="task_description" name="task_description" placeholder="description">
       <label for="task_priority">Priority level:</label>
       <input type="text" id="task_priority" name="task_priority" placeholder="priority">
-      <input type="submit" value="(+) add">
+      <input type="submit" value="Create Task">
     </form><!-- #add_task -->
-    
-    <section id="lists"></section>
-    
+
+
+    <div class="container">
+      <section id='lists'>
+        <!-- Lists are being created here -->
+      </section>
+    </div>
+    </div>
+
+  </div><!--container -->
   </div><!-- #wrapper -->
 </body>
 </html>
