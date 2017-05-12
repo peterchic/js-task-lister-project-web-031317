@@ -7,12 +7,12 @@ class Category {
     Category.all.push(this)
     }
 
-    // static render(){
-    //   return Category.all.map(function(categoryItem){
-    //     console.log(categoryItem.id)
-    //     return $("#select_category").append(`<option value=${categoryItem.id}>${categoryItem.title}</option>`)
-    //   }).join(" ")
-    // }
+    static render(){
+      return Category.all.map(function(categoryItem){
+        console.log(categoryItem.id)
+        return $("#select_category").append(`<option value=${categoryItem.id}>${categoryItem.title}</option>`)
+      }).join(" ")
+    }
   }
 
   Category.all = []
