@@ -14,10 +14,9 @@ $(document).ready(function(){
         <option value=modified_fr>French</option>
         <option value=modified_it>Italian</option>`
     )
-// make if conditional that if the value number of the category is selected, then append appropriate selected_original phrase dropdown
-// tion value=Whereisthehostpital?>Where is the hostpital?</option>
-      //    `
-        switchCat()
+
+    switchCat()
+
   })
 
   function switchCat(){
@@ -57,26 +56,10 @@ $(document).ready(function(){
         var $original3 = $("#selected_original").val()
         var $original4 = $("#selected_original").val()
         var $original5 = $("#selected_original").val()
-        // console.log($selected_language)
-        // var greet
-        // var finalCategory = Category.all.find(function(category) {
-        //   debugger
-        //   return category.title = $category
-        //   console.log(category.title)
-        // })
 
         $.ajax({
           url: `http://localhost:3000/api/v1/categories/${$category}`,
-          // data: {
-          //   original: $original,
-          //   selected_language: $selected_language,
-          //   selected_category: $category
-          // },
           success: function(data){
-
-            // debugger
-            // console.log("from success=============", data);
-            // console.log("from original=============", $original);
             var display = data.translations.map(function(greet){
                 // debugger
                if ( $selected_language == "modified_sp" && greet.original.replace(/\s+/g,'') == $greeting){
@@ -99,25 +82,6 @@ $(document).ready(function(){
                 return word != undefined
               })
             $("#categories").append(`<li>${display}</li>`)
-
           }
-
           })
-            // var newTranslation = new Translation($original, $selected_language, finalCategory)
         })
-
-        // $(`#${finalCategory.title}`).append(`<h3>Description: ${$original} Priority: <strong> ${$modified_sp}</strong></h3>`)
-        // // var resetPri = document.getElementById("translation_priority");
-        // // form.reset();
-        // var formA = document.getElementById("add_translation");
-        // formA.reset();
-
-
-//data from ajax request on endpoint url
-// data.translations.map(function(greet){
-// if (greet.modified_sp){
-// return greet.modified_sp
-// }
-// }).filter(function(word){
-// return word != undefined
-// })
