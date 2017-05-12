@@ -1,0 +1,24 @@
+{
+  "name": "js-task-lister-project-web-031317",
+  "version": "1.0.0",
+  "description": "JS Task Lister",
+  "main": "app.js",
+  "dependencies": {
+    "gtrans": "^1.1.0",
+    "package.json": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterchic/js-task-lister-project-web-031317.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peterchic/js-task-lister-project-web-031317/issues"
+  },
+  "homepage": "https://github.com/peterchic/js-task-lister-project-web-031317#readme"
+}
