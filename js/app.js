@@ -20,7 +20,7 @@ $(document).ready(function(){
   })
 
   function switchCat(){
-    debugger
+    // debugger
     $("#select_category").change( function(){
       $("select").not(this).val(this.value);
       if ( $("#select_category").val() == 1){

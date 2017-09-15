@@ -7,8 +7,6 @@ class Translation {
     this.id = Translation.all.length
     Translation.all.push(this)
   }
-
-
 }
 
 Translation.all = []
