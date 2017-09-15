@@ -2,46 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>OO Translation category</title>
+  <title>Romance Translator</title>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat|Oswald' rel='stylesheet' type='text/css'>
+<!-- Booooooootstrap -->
+<link rel="stylesheet" href="node_modules/rellax/css/bootstrap.min.css">
+<!-- Styles -->
+<link rel="stylesheet" type="text/css" href="node_modules/rellax/css/main.css">
 
-</head>
+
 <body>
-  <div id="wrapper">
-    <h1>my translation category</h1>
+  <main class="main">
+    <header>
+      <div class="container">
+          <div class="title">
+            <div class="row">
+              <div class="col-md-offset-2 col-md-12">
+                <h1>TRANSLATE THIS</h1><br><br><br>
+              </div>
+            </div>
+          </div>
 
-    <!-- <form id="add_category" action="#" method="post">
-      <label for="category_title">Add a new category:</label>
-      <input type="text" id="category_title" name="category_title" placeholder="title">
-      <input type="submit" value="Create category">
-    </form><! #add_category -->
+  <center><div class="absolute above">
 
-    <form id="add_translation" action="#" method="post">
-      <label for="select_category">Select category:</label>
-      <select id="select_category" name="select_category"></select>
-      <label for="original">Original Phrase:</label>
-      <select id="selected_original" name="original"></select><br>
-      <label for="selected_language">Select Language:</label>
-      <select id="selected_language" name="selected_language"></select><br>
-      <input type="submit" value="Create Translation">
-    </form><!-- #add_translation -->
+  <div class="col-md-5">
+      <div class="rellax"
+        data-rellax-speed="5">
+        <center>  <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Add a new Category:</h3>
+            </div>
+          <center>  <div class="panel-body">
+              <form id="add_translation" action="#" method="post">
+                <label for="select_category">Select category:</label>
+                <select id="select_category" name="select_category"></select><br><br>
+                <label for="original">Original Phrase:</label>
+                <select id="selected_original" name="original"></select><br><br>
+                <label for="selected_language">Select Language:</label>
+                <select id="selected_language" name="selected_language"></select><br><br>
+                <input type="submit" value="Create Translation">
+              </form><!-- #add_translation -->
+          </div>
+          </div></center>
+
+          <div class="absolute above">
+            <div class="container">
+              <div class="row">
+                <div class="container">
+                  <div class="col-md-4">
+                    <div class="rellax"
+                      data-rellax-speed="4"><h2><section id='categories'></section></h2>
+                    </div>
+                    <div class="rellax"
+                      data-rellax-speed="5"
+                      style="transform: rotate(45deg);">
+                    </div>
+                  </div>
+                    <!-- Categorys are being created here -->
+                </div>
+              </div>
+            </div>
+          </div>
 
 
-    <div class="container">
+    <!-- <div class="container">
       <section id='categories'>
-        <!-- categories are being created here -->
-      </section>
+        <!- categories are being created here -->
+      <!-- </section>
+    </div> -->
     </div>
-    </div>
-
+</div></center>
+</div></center>
   </div><!--container -->
-  </div><!-- #wrapper -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+
+  <script type="text/javascript" src="./node_modules/rellax/rellax.js"></script>
+  <script>
+  var rellax = new Rellax('.rellax', {
+    // center: true
+  });
+  </script>
   <script src="js/lib/jquery-2.1.1.min.js"></script>
   <script src="js/models/category.js"></script>
   <script src="js/models/translation.js"></script>
-  <!-- <script src="js/controllers/categorys.controller.js"></script>
-  <script src="js/controllers/translations.controller.js"></script> -->
   <script src="js/app.js"></script>
+  </main>
 </body>
 </html>

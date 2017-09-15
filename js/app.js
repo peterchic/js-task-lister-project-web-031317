@@ -20,32 +20,33 @@ $(document).ready(function(){
   })
 
   function switchCat(){
-    // debugger
-    $("#select_category").change(function(){
-        $("select").not(this).val(this.value);
+    debugger
+    $("#select_category").change( function(){
+      $("select").not(this).val(this.value);
       if ( $("#select_category").val() == 1){
-      $("#selected_original").html(`<option value=Hello>Hello</option>
-      <option value=Howareyou?>How are you?</option>
-      <option value=Thankyou>Thank you</option>
-      <option value=Nicetomeetyou!>Nice to meet you!</option>
-      <option value=Goodbye>Goodbye</option>`)
-    }
-      if ($("#select_category").val() == 2){
-        $("select").not(this).val(this.value);
-      $("#selected_original").html(`<option value=Whereisthenearestrestaurant?>Where is the nearest restaurant?</option>
-      <option value=Areyouhungry?>Are you hungry?</option>
-      <option value=Wanttogetadrink?>Want to get a drink?</option>`)
-    }
-      if ($("#select_category").val() == 3){
-        $("select").not(this).val(this.value);
-        $("#selected_original").html(`<option value=Whereisthebathroom?>Where is the bathroom?</option>
-        <option value=Whereisthelibrary?>Where is the library?</option>
-        <option value=Whereisthehostpital?>Where is the hostpital?</option>`)
-       }
-     })
-    }
+        $("#selected_original").html(`<option value=Hello>Hello</option>
+          <option value=Howareyou?>How are you?</option>
+          <option value=Thankyou>Thank you</option>
+          <option value=Nicetomeetyou!>Nice to meet you!</option>
+          <option value=Goodbye>Goodbye</option>`)
+        }
+        if ($("#select_category").val() == 2){
+          $("select").not(this).val(this.value);
+          $("#selected_original").html(`<option value=Whereisthenearestrestaurant?>Where is the nearest restaurant?</option>
+            <option value=Areyouhungry?>Are you hungry?</option>
+            <option value=Wanttogetadrink?>Want to get a drink?</option>`)
+          }
+          if ($("#select_category").val() == 3){
+            $("select").not(this).val(this.value);
+            $("#selected_original").html(`<option value=Whereisthebathroom?>Where is the bathroom?</option>
+              <option value=Whereisthelibrary?>Where is the library?</option>
+              <option value=Whereisthehostpital?>Where is the hostpital?</option>`)
+            }
+          })
+        }
 
-      $("#add_translation").on("submit", function(event){
+
+$("#add_translation").on("submit", function(event){
         event.preventDefault()
         var $category = $("#select_category").val()
         var $greeting  = $("#selected_original").val()
@@ -56,7 +57,6 @@ $(document).ready(function(){
         var $original3 = $("#selected_original").val()
         var $original4 = $("#selected_original").val()
         var $original5 = $("#selected_original").val()
-
         $.ajax({
           url: `http://localhost:3000/api/v1/categories/${$category}`,
           success: function(data){
@@ -81,7 +81,7 @@ $(document).ready(function(){
                 // console.log("filter word:", word);
                 return word != undefined
               })
-            $("#categories").append(`<li>${display}</li>`)
+            $("#categories").append(`<ul>${display}</ul>`)
           }
           })
         })

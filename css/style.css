@@ -31,9 +31,6 @@ form, #lists div {
 	border-radius:5px;
 	margin:0 2% 2% 0;
 	box-shadow: 2px 5px 5px #333;
-}
-
-form, #lists div {
 	width:31%;
 	float:left;
 	padding-top: 20px;
